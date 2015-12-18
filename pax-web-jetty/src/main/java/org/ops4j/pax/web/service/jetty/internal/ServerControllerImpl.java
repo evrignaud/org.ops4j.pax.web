@@ -500,7 +500,7 @@ class ServerControllerImpl implements ServerController {
 									.getConnectionFactory(SslConnectionFactory.class) != null) {
 								ServerConnector sslCon = (ServerConnector) connector;
 								String[] split = connector.getName().split(":");
-								if (httpSecurePort == Integer.valueOf(split[1])
+								if (split.length == 2 && httpSecurePort == Integer.valueOf(split[1])
 										.intValue()
 										&& address.equalsIgnoreCase(split[0])) {
 									httpSecureConnector = sslCon;
@@ -534,10 +534,22 @@ class ServerControllerImpl implements ServerController {
 											sslPassword, sslKeyPassword,
 											address, configuration
 													.getSslKeystoreType(),
+											configuration
+													.getSslKeyAlias(),
+											configuration
+													.getTrustStore(),
+											configuration
+													.getTrustStorePassword(),
+											configuration
+													.getTrustStoreType(),
 											configuration.isClientAuthNeeded(),
 											configuration.isClientAuthWanted(), 
 											configuration.getCiphersuiteIncluded(), 
-											configuration.getCiphersuiteExcluded());
+											configuration.getCiphersuiteExcluded(),
+											configuration
+													.getProtocolsIncluded(),
+											configuration
+													.getProtocolsExcluded());
 							if (httpSecureConnector == null) {
 								httpSecureConnector = (ServerConnector) secureConnector;
 							}

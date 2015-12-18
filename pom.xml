@@ -104,7 +104,7 @@
 		<dependency.xbean.version>4.1</dependency.xbean.version>
 		<dependency.xnio.version>3.3.1.0-SNAPSHOT</dependency.xnio.version>
 		<dependency.undertow.version>1.2.8.0-SNAPSHOT</dependency.undertow.version>
-		<version.pax-exam>4.7.0-SNAPSHOT</version.pax-exam>
+		<version.pax-exam>4.7.0</version.pax-exam>
 
 		<tipi.tomcat.version>8.0.14.1</tipi.tomcat.version>
 		<jsf-myfaces.version>2.2.6</jsf-myfaces.version>
@@ -117,7 +117,7 @@
 
 		<!-- Plugins -->
 		<gatling-plugin.version>2.0.0</gatling-plugin.version>
-		<bundle-plugin.version>3.0.0</bundle-plugin.version>
+		<bundle-plugin.version>3.0.1</bundle-plugin.version>
 
 		<servlet.spec.groupId>javax.servlet</servlet.spec.groupId>
 		<servlet.spec.artifactId>javax.servlet-api</servlet.spec.artifactId>
@@ -134,7 +134,7 @@
 		<sonar.language>java</sonar.language>
 
 		<!-- version to compare this version to for baselineing -->
-		<baseline.version>4.2.0</baseline.version>
+		<baseline.version>4.2.4</baseline.version>
 	</properties>
 
 	<build>
